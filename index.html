@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Nuhu | Personal Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fc;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #071b3a;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    header h2 {
+      color: #fff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 7px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #8dbbff;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #071b3a, #174b85);
+      color: white;
+      padding: 85px 8%;
+      text-align: center;
+    }
+
+    .hero .tag {
+      color: #b9d7ff;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 7vw, 52px);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 5px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      background: white;
+      color: #071b3a;
+    }
+
+    .button.primary {
+      background: #76adff;
+      color: #071b3a;
+    }
+
+    section {
+      padding: 55px 8%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #0a2853;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      margin: 16px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: #e1ecff;
+      color: #123d75;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #174b85;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #071b3a;
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        line-height: 2.2;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      section {
+        padding: 40px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Muhammad Nuhu</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <p class="tag">MATHEMATICS · COMPUTING · DATA SCIENCE</p>
+    <h1>Hello, I'm Muhammad Nuhu</h1>
+    <p>
+      Mathematics Enthusiast | Data Science Learner.
+      I enjoy solving problems, exploring mathematics, and
+      using technology to understand and solve real-world challenges.
+    </p>
+    <a href="#projects" class="button primary">Explore My Projects</a>
+    <a href="#contact" class="button">Contact Me</a>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I am a Nigerian graduate with a background in Physics,
+        Mathematics and Computer Science. I am interested in
+        mathematical problem-solving, computing, data analysis,
+        and research.
+      </p>
+      <p>
+        I enjoy learning new things, developing my technical skills,
+        and exploring how mathematical ideas can solve practical
+        problems in society.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>Bachelor's Degree in Physics, Mathematics and Computer Science</h3>
+      <p>Amrita Vishwa Vidyapeetham, India</p>
+      <p>Graduated: 2025</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Interests</h2>
+    <div class="card">
+      <div class="skills">
+        <span>Mathematical Problem-Solving</span>
+        <span>Graph Theory</span>
+        <span>Data Analysis</span>
+        <span>Computing</span>
+        <span>Analytical Thinking</span>
+        <span>Research</span>
+        <span>Communication</span>
+        <span>Teamwork</span>
+      </div>
+      <p style="margin-top:18px">
+        I am continually developing my programming and data science
+        skills. I will update this section as I gain more experience.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Project</h2>
+    <div class="card">
+      <h3>Optimizing Public Transportation Networks Using Graph Theory</h3>
+      <p><strong>Location:</strong> Kano Metropolis, Nigeria</p>
+      <p>
+        My undergraduate project explored the application of graph
+        theory and the Chinese Postman Problem algorithm to public
+        transportation network optimization along Ibrahim Taiwo Road
+        and Ibrahim Badamasi Babangida Way.
+      </p>
+      <p>
+        The project investigated how mathematical modelling can help
+        analyse routes and support more efficient transportation planning.
+      </p>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates & Achievements</h2>
+    <div class="card">
+      <p>UNICEF Child Protection System Strengthening course.</p>
+      <p>Infosys Data Analysis course.</p>
+      <p>World English Institute Intermediate English certificate.</p>
+      <p style="margin-top:12px">
+        I will add further certificates and details as I update my portfolio.
+      </p>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>My CV</h2>
+    <div class="card">
+      <p>
+        My CV will provide more information about my education,
+        experience, skills, and achievements.
+      </p>
+      <p style="margin-top:15px">
+        To activate the download button, save your CV as
+        <strong>muhammad-nuhu-cv.pdf</strong> and upload it alongside
+        your website files when you publish your portfolio.
+      </p>
+      <a class="button primary" href="muhammad-nuhu-cv.pdf" download>
+        Download My CV
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>I welcome opportunities to connect, learn, and collaborate.</p>
+      <p style="margin-top:12px">
+        Email: <em>Add your professional email here.</em>
+      </p>
+      <p>
+        LinkedIn: <em>Add your LinkedIn profile here.</em>
+      </p>
+        <p>
+        GitHub: <em>Add your GitHub profile here.</em>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Muhammad Nuhu | Personal Portfolio</p>
+    <p>Learning, growing, and solving problems through mathematics and technology.</p>
+  </footer>
+
+</body>
+</html>
