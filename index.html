@@ -1,9 +1,14 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The personal portfolio of Muhammad Nuhu, a Mathematics Enthusiast and Data Science Learner.">
-  <title>Muhammad Nuhu | Personal Portfolio</title>  <style>
+
+  <meta name="description" content="The personal portfolio of Muhammad Nuhu, a Mathematics graduate interested in Applied Mathematics, Computing and Data Science.">
+
+  <title>Muhammad Nuhu | Personal Portfolio</title>
+
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -11,53 +16,83 @@
       scroll-behavior: smooth;
     }
 
+    :root {
+      --navy: #071b3a;
+      --blue: #174b85;
+      --accent: #76adff;
+      --light-blue: #eaf2ff;
+      --background: #f5f7fc;
+      --text: #263449;
+      --white: #ffffff;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fc;
-      color: #222;
-      line-height: 1.7;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-wrap: break-word;
+    }
+
+    a {
+      transition: color 0.25s ease, background 0.25s ease;
     }
 
     header {
-      background: #071b3a;
-      color: white;
-      padding: 18px 7%;
+      background: var(--navy);
+      color: var(--white);
+      padding: 20px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 18px;
+      box-shadow: 0 3px 14px rgba(7, 27, 58, 0.15);
     }
 
     header h2 {
-      color: white;
+      color: var(--white);
+      font-size: 23px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
 
     nav a {
-      color: white;
+      color: var(--white);
       text-decoration: none;
-      margin: 0 7px;
-      font-size: 14px;
+      padding: 7px 10px;
+      border-radius: 6px;
+      font-size: 13px;
     }
 
     nav a:hover {
-      color: #8dbbff;
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.08);
     }
 
     .hero {
-      background: linear-gradient(135deg, #071b3a, #174b85);
-      color: white;
-      padding: 75px 8%;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      padding: 80px 7%;
       text-align: center;
     }
 
     .hero .tag {
-      color: #b9d7ff;
-      margin-bottom: 12px;
+      color: #c6ddff;
+      margin-bottom: 14px;
+      font-size: 15px;
+      letter-spacing: 1px;
     }
 
     .hero h1 {
-      font-size: clamp(32px, 7vw, 52px);
+      font-size: clamp(32px, 6vw, 52px);
+      line-height: 1.25;
       margin-bottom: 18px;
     }
 
@@ -67,21 +102,22 @@
       object-fit: cover;
       object-position: center;
       border-radius: 50%;
-      border: 4px solid white;
+      border: 5px solid var(--white);
       display: block;
-      margin: 0 auto 22px;
+      margin: 0 auto 24px;
       background: #e1ecff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
     .photo-fallback {
       display: none;
       width: 170px;
       height: 170px;
-      margin: 0 auto 22px;
+      margin: 0 auto 24px;
       border-radius: 50%;
-      border: 4px solid white;
+      border: 5px solid var(--white);
       background: #e1ecff;
-      color: #071b3a;
+      color: var(--navy);
       align-items: center;
       justify-content: center;
       font-size: 48px;
@@ -89,506 +125,429 @@
     }
 
     .hero p {
-      max-width: 620px;
-      margin: 0 auto 25px;
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: #f0f5ff;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 22px;
-      margin: 5px;
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-
-  :root {
-    --navy: #071b3a;
-    --blue: #174b85;
-    --accent: #76adff;
-    --light-blue: #eaf2ff;
-    --background: #f5f7fc;
-    --text: #263449;
-    --white: #ffffff;
-  }
-
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.8;
-    overflow-wrap: break-word;
-  }
-
-  a {
-    transition: color 0.25s ease, background 0.25s ease;
-  }
-
-  header {
-    background: var(--navy);
-    color: var(--white);
-    padding: 20px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    box-shadow: 0 3px 14px rgba(7, 27, 58, 0.15);
-  }
-
-  header h2 {
-    color: var(--white);
-    font-size: 23px;
-    letter-spacing: 0.3px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  nav a {
-    color: var(--white);
-    text-decoration: none;
-    padding: 7px 10px;
-    border-radius: 6px;
-    font-size: 13px;
-  }
-
-  nav a:hover {
-    color: var(--accent);
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .hero {
-    background: linear-gradient(135deg, var(--navy), var(--blue));
-    color: var(--white);
-    padding: 80px 7%;
-    text-align: center;
-  }
-
-  .hero .tag {
-    color: #c6ddff;
-    margin-bottom: 14px;
-    font-size: 15px;
-    letter-spacing: 1px;
-  }
-
-  .hero h1 {
-    font-size: clamp(32px, 6vw, 52px);
-    line-height: 1.25;
-    margin-bottom: 18px;
-  }
-
-  .profile-photo {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    border: 5px solid var(--white);
-    display: block;
-    margin: 0 auto 24px;
-    background: #e1ecff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  }
-
-  .photo-fallback {
-    display: none;
-    width: 170px;
-    height: 170px;
-    margin: 0 auto 24px;
-    border-radius: 50%;
-    border: 5px solid var(--white);
-    background: #e1ecff;
-    color: var(--navy);
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-    font-weight: bold;
-  }
-
-  .hero p {
-    max-width: 680px;
-    margin: 0 auto 26px;
-    color: #f0f5ff;
-  }
-
-  .button {
-    display: inline-block;
-    padding: 12px 23px;
-    margin: 7px 5px;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    background: var(--white);
-    color: var(--navy);
-  }
-
-  .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
-  }
-
-  .button.primary {
-    background: var(--accent);
-    color: var(--navy);
-  }
-
-  section {
-    padding: 55px 7%;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-    scroll-margin-top: 20px;
-  }
-
-  section h2 {
-    color: var(--navy);
-    font-size: 29px;
-    line-height: 1.4;
-    margin-bottom: 22px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid var(--accent);
-    display: table;
-  }
-
-  .card {
-    background: var(--white);
-    padding: 26px;
-    margin: 18px 0;
-    border: 1px solid #e8edf5;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(7, 27, 58, 0.06);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px 26px rgba(7, 27, 58, 0.1);
-  }
-
-  .card h3 {
-    color: var(--blue);
-    font-size: 19px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-
-  .card p {
-    margin-bottom: 12px;
-  }
-
-  .card p:last-child {
-    margin-bottom: 0;
-  }
-
-  .card ul {
-    padding-left: 23px;
-  }
-
-  .card li {
-    margin-bottom: 7px;
-  }
-
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .skills span {
-    background: var(--light-blue);
-    color: var(--blue);
-    padding: 8px 14px;
-    border: 1px solid #d5e5ff;
-    border-radius: 20px;
-    font-size: 14px;
-  }
-
-  .contact a {
-    color: var(--blue);
-    overflow-wrap: anywhere;
-  }
-
-  .contact a:hover {
-    color: var(--navy);
-    text-decoration: none;
-  }
-
-  footer {
-    background: var(--navy);
-    color: var(--white);
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 25px;
-  }
-
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      padding: 20px 5%;
+      padding: 12px 23px;
+      margin: 7px 5px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      background: var(--white);
+      color: var(--navy);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    nav {
-      width: 100%;
-      gap: 5px;
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
     }
 
-    nav a {
-      font-size: 13px;
-      padding: 7px 9px;
-    }
-
-    .hero {
-      padding: 55px 6%;
+    .button.primary {
+      background: var(--accent);
+      color: var(--navy);
     }
 
     section {
-      padding: 38px 6%;
+      padding: 55px 7%;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      scroll-margin-top: 20px;
     }
 
     section h2 {
-      font-size: 25px;
+      color: var(--navy);
+      font-size: 29px;
+      line-height: 1.4;
+      margin-bottom: 22px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--accent);
+      display: table;
     }
 
     .card {
-      padding: 20px;
-    }
-  }
-
-  @media (max-width: 400px) {
-    header h2 {
-      font-size: 20px;
-    }
-
-    nav a {
-      font-size: 12px;
-      padding: 6px 7px;
+      background: var(--white);
+      padding: 26px;
+      margin: 18px 0;
+      border: 1px solid #e8edf5;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(7, 27, 58, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .hero h1 {
-      font-size: 30px;
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 26px rgba(7, 27, 58, 0.1);
     }
 
-    .profile-photo,
-    .photo-fallback {
-      width: 145px;
-      height: 145px;
+    .card h3 {
+      color: var(--blue);
+      font-size: 19px;
+      line-height: 1.5;
+      margin-bottom: 10px;
     }
 
-    section {
-      padding: 32px 5%;
+    .card p {
+      margin-bottom: 12px;
     }
 
-    .card {
-      padding: 16px;
+    .card p:last-child {
+      margin-bottom: 0;
     }
 
-    .button {
-      padding: 11px 16px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      scroll-behavior: auto !important;
-      transition: none !important;
+    .card ul {
+      padding-left: 23px;
     }
 
-    .card:hover,
-    .button:hover {
-      transform: none;
+    .card li {
+      margin-bottom: 7px;
     }
-  }
-      
-  </style></head><body>  <header>
+
+    .contact a {
+      color: var(--blue);
+      overflow-wrap: anywhere;
+    }
+
+    .contact a:hover {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 5%;
+      }
+
+      nav {
+        width: 100%;
+        gap: 5px;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 7px 9px;
+      }
+
+      .hero {
+        padding: 55px 6%;
+      }
+
+      section {
+        padding: 38px 6%;
+      }
+
+      section h2 {
+        font-size: 25px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      header h2 {
+        font-size: 20px;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 6px 7px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .profile-photo,
+      .photo-fallback {
+        width: 145px;
+        height: 145px;
+      }
+
+      section {
+        padding: 32px 5%;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .button {
+        padding: 11px 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+
+      .card:hover,
+      .button:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
     <h2>Muhammad Nuhu</h2>
+
     <nav>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#interests">Academic Interests</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Research Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
-  <a href="./muhammad-nuhu-cv.pdf" download>Download CV</a> 
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#interests">Academic Interests</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Research Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+      <a href="./muhammad-nuhu-cv.pdf" download>Download CV</a>
     </nav>
-  </header>  <div class="hero">
+  </header>
+
+  <div class="hero">
+
     <p class="tag">MATHEMATICS · COMPUTING · DATA SCIENCE</p>
-    
-    <img id="profilePhoto" class="profile-photo" src="./passport_photos_8_on_4x6-7%20(1).jpg" alt="Portrait of Muhammad Nuhu" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';">
 
-<div id="photoFallback" class="photo-fallback" aria-label="Muhammad Nuhu initials">MN</div>
+    <img
+      id="profilePhoto"
+      class="profile-photo"
+      src="./passport_photos_8_on_4x6-7%20(1).jpg"
+      alt="Portrait of Muhammad Nuhu"
+      onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';"
+    >
 
-<h1>Hello, I'm Muhammad Nuhu</h1>
+    <div id="photoFallback" class="photo-fallback">
+      MN
+    </div>
 
-<p>
-  Mathematics Enthusiast | Data Science Learner.
-  I enjoy solving problems, exploring mathematics, and
-  using technology to understand and solve real-world challenges.
-</p>
+    <h1>Hello, I'm Muhammad Nuhu</h1>
 
-<a href="#projects" class="button primary">Explore My Projects</a>
-<a href="#contact" class="button">Contact Me</a>
+    <p>
+      Mathematics Enthusiast | Data Science Learner.
+      I enjoy solving problems, exploring mathematics, and
+      using technology to understand and solve real-world challenges.
+    </p>
 
-  </div>  <section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I am a Nigerian graduate with a Bachelor of Science in
-      Physics, Mathematics and Computer Science from Amrita
-      Vishwa Vidyapeetham, India, completed in May 2025.
-    </p>
-    <p>
-      I have a strong interest in mathematical problem-solving,
-      computational methods, statistics and data analysis.
-    </p>
-    <p>
-      I am passionate about research, continuous learning and
-      applying mathematical ideas to solve real-world problems.
-    </p>
+    <a href="#projects" class="button primary">Explore My Projects</a>
+    <a href="#contact" class="button">Contact Me</a>
+
   </div>
-</section><section id="education">
-  <h2>Education</h2>
-  <div class="card">
-    <h3>Bachelor of Science in Physics, Mathematics and Computer Science</h3>
-    <p>Amrita Vishwa Vidyapeetham, India</p>
-    <p>Graduated: May 2025</p>
-  </div>
-</section><section id="projects">
-  <h2>Research Projects</h2>
-  <div class="card">
-    <h3>Optimising Public Transportation Networks Using Graph Theory</h3>
-    <p>
-      My undergraduate research explored the application of
-      Graph Theory to public transportation network optimisation
-      in Kano Metropolis, Nigeria.
-    </p>
-    <p>
-      The study applied the Chinese Postman Problem algorithm
-      to model road networks and investigate efficient routes
-      for traversing the selected roads.
-    </p>
-    <p>
-      <strong>Research Areas:</strong> Graph Theory,
-      Combinatorial Optimisation and Applied Mathematics.
-    </p>
-  </div>
-</section>  <section id="interests">
-  <h2>Academic Interests</h2>
-  <div class="card">
-    <ul>
-      <li>Ordinary Differential Equations (ODEs)</li>
-      <li>Partial Differential Equations (PDEs)</li>
-      <li>Statistics and Data Analysis</li>
-      <li>Graph Theory and Combinatorial Optimisation</li>
-      <li>Mathematical Modelling</li>
-      <li>Mathematics and Computing</li>
-    </ul>
-  </div>
-</section>  <section id="skills">
-  <h2>Skills</h2>  <div class="card">
-    <h3>Programming and Computing</h3>
-    <ul>
-      <li>Python – Basic Knowledge</li>
-      <li>HTML and CSS – Fundamentals</li>
-      <li>Data Structures and Algorithms</li>
-      <li>Database Systems</li>
-    </ul>
-  </div>  <div class="card">
-    <h3>Mathematics and Analytical Skills</h3>
-    <ul>
-      <li>Mathematical Problem-Solving</li>
-      <li>Statistical Analysis – Academic Foundation</li>
-      <li>Graph Theory</li>
-      <li>Mathematical Modelling – Academic Interest</li>
-    </ul>
-  </div>  <div class="card">
-    <h3>Other Skills</h3>
-    <ul>
-      <li>Photography</li>
-      <li>Communication</li>
-      <li>Leadership and Teamwork</li>
-      <li>Qualified Barber</li>
-    </ul>
-  </div>
-</section>   <section id="certifications">
-  <h2>Certifications & Professional Development</h2>  <div class="card">
-    <h3>Child Protection System Strengthening</h3>
-    <p>UNICEF</p>
-  </div>  <div class="card">
-    <h3>Data Analysis</h3>
-    <p>Infosys</p>
-  </div>  <div class="card">
-    <h3>Intermediate English</h3>
-    <p>World English Institute</p>
-  </div>
-</section> <section id="cv">
-    <h2>My CV</h2>
+
+  <section id="about">
+    <h2>About Me</h2>
+
     <div class="card">
       <p>
-        My CV will provide more information about my education,
-        experience, skills, and achievements.
+        I am a Nigerian graduate with a Bachelor of Science in
+        Physics, Mathematics and Computer Science from Amrita
+        Vishwa Vidyapeetham, India, completed in May 2025.
       </p>
-      <p style="margin-top:15px">
-        To activate the download button, upload your CV PDF as
-        <strong>muhammad-nuhu-cv.pdf</strong> alongside this HTML file.
+
+      <p>
+        I have a strong interest in mathematical problem-solving,
+        computational methods, statistics and data analysis.
       </p>
+
+      <p>
+        I am passionate about research, continuous learning and
+        applying mathematical ideas to solve real-world problems.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>Bachelor of Science in Physics, Mathematics and Computer Science</h3>
+      <p>Amrita Vishwa Vidyapeetham, India</p>
+      <p>Graduated: May 2025</p>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2>Academic Interests</h2>
+
+    <div class="card">
+      <ul>
+        <li>Ordinary Differential Equations (ODEs)</li>
+        <li>Partial Differential Equations (PDEs)</li>
+        <li>Statistics and Data Analysis</li>
+        <li>Graph Theory and Combinatorial Optimisation</li>
+        <li>Mathematical Modelling</li>
+        <li>Mathematics and Computing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Research Projects</h2>
+
+    <div class="card">
+      <h3>Optimising Public Transportation Networks Using Graph Theory</h3>
+
+      <p>
+        My undergraduate research explored the application of
+        Graph Theory to public transportation network optimisation
+        in Kano Metropolis, Nigeria.
+      </p>
+
+      <p>
+        The study applied the Chinese Postman Problem algorithm
+        to model road networks and investigate efficient routes
+        for traversing the selected roads.
+      </p>
+
+      <p>
+        <strong>Research Areas:</strong> Graph Theory,
+        Combinatorial Optimisation and Applied Mathematics.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="card">
+      <h3>Programming and Computing</h3>
+      <ul>
+        <li>Python – Basic Knowledge</li>
+        <li>HTML and CSS – Fundamentals</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Database Systems</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Mathematics and Analytical Skills</h3>
+      <ul>
+        <li>Mathematical Problem-Solving</li>
+        <li>Statistical Analysis – Academic Foundation</li>
+        <li>Graph Theory</li>
+        <li>Mathematical Modelling – Academic Interest</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Other Skills</h3>
+      <ul>
+        <li>Photography</li>
+        <li>Communication</li>
+        <li>Leadership and Teamwork</li>
+        <li>Qualified Barber</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications & Professional Development</h2>
+
+    <div class="card">
+      <h3>Child Protection System Strengthening</h3>
+      <p>UNICEF</p>
+    </div>
+
+    <div class="card">
+      <h3>Data Analysis</h3>
+      <p>Infosys</p>
+    </div>
+
+    <div class="card">
+      <h3>Intermediate English</h3>
+      <p>World English Institute</p>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>My CV</h2>
+
+    <div class="card">
+      <p>
+        My CV provides further information about my education,
+        experience, skills and achievements.
+      </p>
+
       <a class="button primary" href="./muhammad-nuhu-cv.pdf" download>
         Download My CV
       </a>
     </div>
-  </section>  <section id="contact">
-  <h2>Contact Me</h2>  <div class="card">
-    <p>
-      I am open to postgraduate study opportunities,
-      research collaborations and professional connections.
-    </p><p>
-  <strong>Email:</strong>
-  <a href="mailto:muhammadnuhu760@gmail.com">
-    muhammadnuhu760@gmail.com
-  </a>
-</p>
+  </section>
 
-    <p>
-  <strong>Phone:</strong>
-  <a href="tel:+2347065531579">+234 706 553 1579</a>
-    </p>
+  <section id="contact">
+    <h2>Contact Me</h2>
 
-<p>
-  <strong>LinkedIn:</strong>
-  <a href="https://www.linkedin.com/in/muhammad-nuhu-50b24b436/"
-     target="_blank"
-     rel="noopener noreferrer">
-    Visit my LinkedIn profile
-  </a>
-</p>
+    <div class="card contact">
 
-<p>
-  <strong>GitHub:</strong>
-  <a href="https://github.com/officer10364-cloud"
-     target="_blank">
-    Visit my GitHub profile
-  </a>
-</p>
+      <p>
+        I am open to postgraduate study opportunities,
+        research collaborations and professional connections.
+      </p>
 
-  </div>
-</section>  <footer>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:muhammadnuhu760@gmail.com">
+          muhammadnuhu760@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+2347065531579">+234 706 553 1579</a>
+      </p>
+
+      <p>
+        <strong>LinkedIn:</strong>
+        <a
+          href="https://www.linkedin.com/in/muhammad-nuhu-50b24b436/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit my LinkedIn profile
+        </a>
+      </p>
+
+      <p>
+        <strong>GitHub:</strong>
+        <a
+          href="https://github.com/officer10364-cloud"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit my GitHub profile
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+  <footer>
     <p>&copy; 2026 Muhammad Nuhu | Personal Portfolio</p>
     <p>Learning, growing, and solving problems through mathematics and technology.</p>
   </footer>
-    
-  </body>
+
+</body>
 </html>
