@@ -97,82 +97,321 @@
       display: inline-block;
       padding: 12px 22px;
       margin: 5px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-      background: white;
-      color: #071b3a;
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --navy: #071b3a;
+    --blue: #174b85;
+    --accent: #76adff;
+    --light-blue: #eaf2ff;
+    --background: #f5f7fc;
+    --text: #263449;
+    --white: #ffffff;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.8;
+    overflow-wrap: break-word;
+  }
+
+  a {
+    transition: color 0.25s ease, background 0.25s ease;
+  }
+
+  header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    box-shadow: 0 3px 14px rgba(7, 27, 58, 0.15);
+  }
+
+  header h2 {
+    color: var(--white);
+    font-size: 23px;
+    letter-spacing: 0.3px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: var(--white);
+    padding: 80px 7%;
+    text-align: center;
+  }
+
+  .hero .tag {
+    color: #c6ddff;
+    margin-bottom: 14px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .profile-photo {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    display: block;
+    margin: 0 auto 24px;
+    background: #e1ecff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .photo-fallback {
+    display: none;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    background: #e1ecff;
+    color: var(--navy);
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .hero p {
+    max-width: 680px;
+    margin: 0 auto 26px;
+    color: #f0f5ff;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 12px 23px;
+    margin: 7px 5px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    background: var(--white);
+    color: var(--navy);
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+  }
+
+  .button.primary {
+    background: var(--accent);
+    color: var(--navy);
+  }
+
+  section {
+    padding: 55px 7%;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    scroll-margin-top: 20px;
+  }
+
+  section h2 {
+    color: var(--navy);
+    font-size: 29px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent);
+    display: table;
+  }
+
+  .card {
+    background: var(--white);
+    padding: 26px;
+    margin: 18px 0;
+    border: 1px solid #e8edf5;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(7, 27, 58, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 26px rgba(7, 27, 58, 0.1);
+  }
+
+  .card h3 {
+    color: var(--blue);
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    margin-bottom: 12px;
+  }
+
+  .card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .card ul {
+    padding-left: 23px;
+  }
+
+  .card li {
+    margin-bottom: 7px;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skills span {
+    background: var(--light-blue);
+    color: var(--blue);
+    padding: 8px 14px;
+    border: 1px solid #d5e5ff;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .contact a {
+    color: var(--blue);
+    overflow-wrap: anywhere;
+  }
+
+  .contact a:hover {
+    color: var(--navy);
+    text-decoration: none;
+  }
+
+  footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 20px 5%;
     }
 
-    .button.primary {
-      background: #76adff;
-      color: #071b3a;
+    nav {
+      width: 100%;
+      gap: 5px;
+    }
+
+    nav a {
+      font-size: 13px;
+      padding: 7px 9px;
+    }
+
+    .hero {
+      padding: 55px 6%;
     }
 
     section {
-      padding: 55px 8%;
-      max-width: 1100px;
-      margin: auto;
+      padding: 38px 6%;
     }
 
     section h2 {
-      color: #0a2853;
-      font-size: 28px;
-      margin-bottom: 18px;
+      font-size: 25px;
     }
 
     .card {
-      background: white;
-      padding: 24px;
-      margin: 16px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    header h2 {
+      font-size: 20px;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    nav a {
+      font-size: 12px;
+      padding: 6px 7px;
     }
 
-    .skills span {
-      background: #e1ecff;
-      color: #123d75;
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 14px;
+    .hero h1 {
+      font-size: 30px;
     }
 
-    .contact a {
-      color: #174b85;
-      overflow-wrap: anywhere;
+    .profile-photo,
+    .photo-fallback {
+      width: 145px;
+      height: 145px;
     }
 
-    footer {
-      background: #071b3a;
-      color: white;
-      text-align: center;
-      padding: 22px;
+    section {
+      padding: 32px 5%;
     }
 
-    @media (max-width: 600px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        line-height: 2.2;
-      }
-
-      .hero {
-        padding: 60px 6%;
-      }
-
-      section {
-        padding: 40px 6%;
-      }
+    .card {
+      padding: 16px;
     }
+
+    .button {
+      padding: 11px 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition: none !important;
+    }
+
+    .card:hover,
+    .button:hover {
+      transform: none;
+    }
+  }
   </style></head><body>  <header>
     <h2>Muhammad Nuhu</h2>
     <nav>
