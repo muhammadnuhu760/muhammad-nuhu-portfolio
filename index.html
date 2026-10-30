@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Nuhu | Personal Portfolio</title>
-
-  <style>
+  <meta name="description" content="The personal portfolio of Muhammad Nuhu, a Mathematics Enthusiast and Data Science Learner.">
+  <title>Muhammad Nuhu | Personal Portfolio</title>  <style>
     * {
       margin: 0;
       padding: 0;
@@ -32,7 +30,7 @@
     }
 
     header h2 {
-      color: #fff;
+      color: white;
     }
 
     nav a {
@@ -49,7 +47,7 @@
     .hero {
       background: linear-gradient(135deg, #071b3a, #174b85);
       color: white;
-      padding: 85px 8%;
+      padding: 75px 8%;
       text-align: center;
     }
 
@@ -60,7 +58,34 @@
 
     .hero h1 {
       font-size: clamp(32px, 7vw, 52px);
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+    }
+
+    .profile-photo {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 4px solid white;
+      display: block;
+      margin: 0 auto 22px;
+      background: #e1ecff;
+    }
+
+    .photo-fallback {
+      display: none;
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      border: 4px solid white;
+      background: #e1ecff;
+      color: #071b3a;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: bold;
     }
 
     .hero p {
@@ -101,7 +126,7 @@
       padding: 24px;
       margin: 16px 0;
       border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
     }
 
     .skills {
@@ -141,29 +166,14 @@
       }
 
       .hero {
-        padding: 65px 6%;
+        padding: 60px 6%;
       }
 
       section {
         padding: 40px 6%;
       }
     }
-
-    .profile-photo {
-width: 160px;
-height: 160px;
-object-fit: cover;
-border-radius: 50%;
-border: 4px solid white;
-display: block;
-margin: 0 auto 20px;
-}
-  </style>
-</head>
-
-<body>
-
-  <header>
+  </style></head><body>  <header>
     <h2>Muhammad Nuhu</h2>
     <nav>
       <a href="#about">About</a>
@@ -172,23 +182,29 @@ margin: 0 auto 20px;
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </header>  <div class="hero">
+    <p class="tag">MATHEMATICS · COMPUTING · DATA SCIENCE</p><img
+  id="profilePhoto"
+  class="profile-photo"
+  src="./muhammad-nuhu.jpg"
+  alt="Portrait of Muhammad Nuhu"
+  onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';"
+>
 
-  <div class="hero">
-    <p class="tag">MATHEMATICS · COMPUTING · DATA SCIENCE</p>
-    <h1>Hello, I'm Muhammad Nuhu</h1>
-<img src="./muhammad-nuhu.jpg" alt="Muhammad Nuhu" class="profile-photo">
-    
-    <p>
-      Mathematics Enthusiast | Data Science Learner.
-      I enjoy solving problems, exploring mathematics, and
-      using technology to understand and solve real-world challenges.
-    </p>
-    <a href="#projects" class="button primary">Explore My Projects</a>
-    <a href="#contact" class="button">Contact Me</a>
-  </div>
+<div id="photoFallback" class="photo-fallback" aria-label="Muhammad Nuhu initials">MN</div>
 
-  <section id="about">
+<h1>Hello, I'm Muhammad Nuhu</h1>
+
+<p>
+  Mathematics Enthusiast | Data Science Learner.
+  I enjoy solving problems, exploring mathematics, and
+  using technology to understand and solve real-world challenges.
+</p>
+
+<a href="#projects" class="button primary">Explore My Projects</a>
+<a href="#contact" class="button">Contact Me</a>
+
+  </div>  <section id="about">
     <h2>About Me</h2>
     <div class="card">
       <p>
@@ -203,19 +219,15 @@ margin: 0 auto 20px;
         problems in society.
       </p>
     </div>
-  </section>
-
-  <section id="education">
+  </section>  <section id="education">
     <h2>Education</h2>
     <div class="card">
       <h3>Bachelor's Degree in Physics, Mathematics and Computer Science</h3>
       <p>Amrita Vishwa Vidyapeetham, India</p>
       <p>Graduated: 2025</p>
     </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills & Interests</h2>
+  </section>  <section id="skills">
+    <h2>Skills &amp; Interests</h2>
     <div class="card">
       <div class="skills">
         <span>Mathematical Problem-Solving</span>
@@ -232,9 +244,7 @@ margin: 0 auto 20px;
         skills. I will update this section as I gain more experience.
       </p>
     </div>
-  </section>
-
-  <section id="projects">
+  </section>  <section id="projects">
     <h2>Featured Project</h2>
     <div class="card">
       <h3>Optimizing Public Transportation Networks Using Graph Theory</h3>
@@ -250,10 +260,8 @@ margin: 0 auto 20px;
         analyse routes and support more efficient transportation planning.
       </p>
     </div>
-  </section>
-
-  <section id="certificates">
-    <h2>Certificates & Achievements</h2>
+  </section>  <section id="certificates">
+    <h2>Certificates &amp; Achievements</h2>
     <div class="card">
       <p>UNICEF Child Protection System Strengthening course.</p>
       <p>Infosys Data Analysis course.</p>
@@ -262,9 +270,7 @@ margin: 0 auto 20px;
         I will add further certificates and details as I update my portfolio.
       </p>
     </div>
-  </section>
-
-  <section id="cv">
+  </section>  <section id="cv">
     <h2>My CV</h2>
     <div class="card">
       <p>
@@ -272,36 +278,25 @@ margin: 0 auto 20px;
         experience, skills, and achievements.
       </p>
       <p style="margin-top:15px">
-        To activate the download button, save your CV as
-        <strong>muhammad-nuhu-cv.pdf</strong> and upload it alongside
-        your website files when you publish your portfolio.
+        To activate the download button, upload your CV PDF as
+        <strong>muhammad-nuhu-cv.pdf</strong> alongside this HTML file.
       </p>
-      <a class="button primary" href="muhammad-nuhu-cv.pdf" download>
+      <a class="button primary" href="./muhammad-nuhu-cv.pdf" download>
         Download My CV
       </a>
     </div>
-  </section>
-
-  <section id="contact" class="contact">
+  </section>  <section id="contact" class="contact">
     <h2>Contact Me</h2>
     <div class="card">
       <p>I welcome opportunities to connect, learn, and collaborate.</p>
       <p style="margin-top:12px">
         Email: <em>Add your professional email here.</em>
       </p>
-      <p>
-        LinkedIn: <em>Add your LinkedIn profile here.</em>
-      </p>
-        <p>
-        GitHub: <em>Add your GitHub profile here.</em>
-      </p>
+      <p>LinkedIn: <em>Add your LinkedIn profile here.</em></p>
+      <p>GitHub: <a href="https://github.com/officer10364-cloud" target="_blank" rel="noopener noreferrer">github.com/officer10364-cloud</a></p>
     </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Muhammad Nuhu | Personal Portfolio</p>
+  </section>  <footer>
+    <p>&copy; 2026 Muhammad Nuhu | Personal Portfolio</p>
     <p>Learning, growing, and solving problems through mathematics and technology.</p>
-  </footer>
-
-</body>
+  </footer></body>
 </html>
